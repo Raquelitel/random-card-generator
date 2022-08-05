@@ -3,27 +3,122 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Random Card</title>
+
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="./4geeks.ico" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <div class="row justify-content-center my-5">
+      <div class="col-4 d-flex justify-content-center">
+        <button id="btn_add_card" type="button" class="btn btn-primary">
+          ¡Saca una carta!
+        </button>
       </div>
+
+      <!-- Button modal -->
+      <!-- <div class="col-4 d-flex justify-content-center">
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+        >
+          Cambia el alto y ancho
+        </button>
+      </div> -->
+
+      <!-- Modal -->
+      <!-- <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="inputAltoCard" class="form-label"
+                    >Alto de la carta</label
+                  >
+                  <input type="text" class="form-control" id="inputAltoCard" />
+                  <label for="inputAnchoCard" class="form-label"
+                    >Ancho de la carta</label
+                  >
+                  <input type="text" class="form-control" id="inputAnchoCard" />
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+              <button
+                id="btnSizeCard"
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Cambiar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div> -->
     </div>
+    <div class="row">
+      <div id="card" class="container">
+        <h2 class="palo"><i class="bi bi-suit-heart-fill"></i></h2>
+
+        <div class="text-center d-flex justify-content-center">
+          <h1 id="number" class="p-5 number_size">9</h1>
+        </div>
+        <div class="d-flex justify-content-end">
+          <h2 class="palo palo_Down">
+            <i class="bi bi-suit-heart-fill"></i>
+          </h2>
+        </div>
+      </div>
+      <!--.container-->
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
   </body>
 </html>
